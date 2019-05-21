@@ -12,7 +12,7 @@ pipeline {
             }
         }
     }
-    stage('Test') {
+        stage('Test') {
             agent {
                 docker {
                     image 'qnib/pytest'
@@ -26,7 +26,5 @@ pipeline {
                     junit 'test-reports/results.xml'
                 }
             }
-        }
-     }   
-    
+        }    
 }
